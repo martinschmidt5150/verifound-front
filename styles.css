@@ -1,0 +1,312 @@
+/* Estilos generales */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #FFFFFF;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+    padding: 20px;
+}
+
+header {
+    background: #003C71;
+    color: #fff;
+    padding-top: 30px;
+    min-height: 70px;
+    border-radius: 30px 30px 0 0;
+    border-bottom: 10px solid #00263A;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2em;
+}
+
+header p {
+    font-size: 1.2em;
+}
+
+/* Estilos de la sección del formulario */
+#form-section {
+    background: #ffffff;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 0 0 40px 40px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+#form-section h2 {
+    margin-top: 0;
+    color: #00263a;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+}
+
+#form-section form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; /* Distribuye el espacio horizontalmente */
+}
+
+.form-group {
+    width: 100%; /* Ajusta el ancho para que quepan dos en una fila */
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #555;
+}
+
+.form-group input[type="number"],
+.form-group select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    box-sizing: border-box; /* Para que el padding no aumente el ancho */
+    font-size: 1em;
+}
+
+button[type="submit"] {
+    margin-top: 15px;
+    background: #003c71;
+    color: #fff;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 100px;
+    cursor: pointer;
+    font-size: 1.1em;
+    transition: background 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background: #c53614;
+}
+
+/* Estilos de la sección de esquema */
+#img-section {
+    background: #fff;
+    padding: 20px;
+    border-radius: 40px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+	margin-bottom: 20px;
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+/* Estilos de la sección de resultados */
+#results-section {
+    background: #fff;
+    padding: 20px;
+    border-radius: 40px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+#results-section h2, #results-section h3 {
+    color: #00263a;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+}
+
+#resultadosGenerales {
+    margin-bottom: 20px;
+}
+
+#resultadosGenerales p {
+    font-size: 1.1em;
+    color: #555;
+}
+
+button[id="downloadButton"] {
+    background: #003c71;
+    color: #fff;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 100px;
+    cursor: pointer;
+    font-size: 1.1em;
+    transition: background 0.3s ease;
+}
+
+button[id="downloadButton"]:hover {
+    background: #c53614;
+}
+
+/* Estilos de la tabla */
+.table-container {
+    overflow-x: auto; /* Para que la tabla sea scrollable en pantallas pequeñas */
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-bottom: 10px;
+    border-radius: 30px;
+    overflow: hidden;
+}
+
+th, td {
+    border: 0px solid #ddd;
+    padding: 12px 15px;
+    text-align: center;
+}
+
+th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+    color: #333;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+/* Media Queries para hacerlo responsivo */
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+    }
+
+    header {
+        padding-top: 20px;
+    }
+
+    header h1 {
+        font-size: 1.7em;
+    }
+
+    .form-group {
+        width: 100%; /* Vuelve a ocupar todo el ancho en pantallas pequeñas */
+    }
+
+    .form-group input[type="number"],
+    .form-group select {
+        font-size: 0.9em;
+    }
+
+    button[type="submit"] {
+        font-size: 1em;
+    }
+
+    #resultadosGenerales p {
+        font-size: 1em;
+    }
+}
+
+/* Estilos para el contenedor que alinea imagen y formulario */
+.popup-content-wrapper {
+    display: flex; /* Activa flexbox */
+    flex-direction: row; /* Alinea los elementos en fila (uno al lado del otro) */
+    align-items: flex-start; /* Alinea los elementos en la parte superior */
+    justify-content: space-between; /* Espacia los elementos uniformemente */
+}
+
+/* Estilos para el contenedor del formulario dentro del popup */
+.popup-form {
+    width: 48%; /* Ancho para los inputs (aproximadamente la mitad del popup) */
+}
+
+/* Estilos para los botones de popup */
+.popup-buttons {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+/* Estilos para los botones de popup (AHORA CON EL MISMO ESTILO QUE "Calcular") */
+.popup-buttons button {
+    background: #003c71; /* Mismo color de fondo */
+    color: #fff; /* Mismo color de texto */
+    padding: 12px 20px; /* Mismo padding */
+    border: none; /* Elimina el borde */
+    border-radius: 100px; /* Mismo radio para hacerlo redondeado */
+    cursor: pointer; /* Cambia el cursor al pasar por encima */
+    font-size: 1.1em; /* Mismo tamaño de fuente */
+    transition: background 0.3s ease; /* Misma transición para el hover */
+}
+
+.popup-buttons button:hover {
+    background: #c53614; /* Mismo color de fondo al hacer hover */
+}
+
+/* Estilos para la imagen dentro del popup */
+.popup-image {
+    width: 48%; /* Ancho para la imagen (aproximadamente la mitad del popup) */
+    /*max-width: 300px;*/ /* Ancho máximo para evitar que se vea demasiado grande */
+    height: auto; /* Mantiene la proporción de la imagen */
+}
+
+/* Estilos para los popups */
+.popup {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+.popup-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 50%; /* Could be more or less, depending on screen size */
+    border-radius: 20px;
+    position: relative;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    color: #aaa;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Estilos para el botón "Guardar" */
+.save-button {
+    background: #003c71;
+    color: #fff;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 100px;
+    cursor: pointer;
+    font-size: 1.1em;
+    transition: background 0.3s ease;
+    display: block;
+    margin: 10px auto;
+}
+
+.save-button:hover {
+    background: #c53614;
+}
